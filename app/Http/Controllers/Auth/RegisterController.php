@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -49,9 +49,16 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            
+            'id' => ['required', 'string', 'max:8', 'unique:users'],
+            'cliente' => ['required', 'string', 'max:255'],
+            'data' => ['required', 'string'],
+            'hora' => ['required', 'string'],
+            'vendedor' => ['required', 'string', 'max:255'],
+            'descricao' => ['required', 'string', 'max:255'],
+            'valor' => 'numeric',
+            
+            
         ]);
     }
 
@@ -64,9 +71,17 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            /*'name' => $data['name'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'password' => Hash::make($data['password']),*/
+
+            'id' => $data['id'],
+            'cliente' => $data['cliente'],
+            'data' => $data['data'],
+            'hora' => $data['hora'],
+            'vendedor' => $data['vendedor'],
+            'descricao' => $data['descricao'],
+            'valor' => $data['valor'],
         ]);
     }
 }
