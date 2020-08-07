@@ -1,3 +1,18 @@
+Informações sobre o projeto:<br>
+
+Criador: Henrique Duarte Guerra<br>
+Banco de dados utilizado: sqlite;<br>
+Necessário ter o composer instalado no sistema para executar o projeto;<br>
+
+
+Tutorial de uso:<br>
+
+Tendo o Composer instalado no sistema, vá ao terminal e localize a pasta onde o projeto foi salvo. Execute o comando "php artisan serve", e deixe o terminal aberto durante o uso do site. Após executar o comando "php artisan serve", aparecerá na tela do terminal um link, copie e cole ele no seu browser de preferência. O site será aberto na tela inicial, e você terá duas opções: Cadastro (para cadastrar orçamentos), ou Orçamentos (para consultar os já cadastrados).<br>
+Na tela de Cadastro existem 7 campos a serem preenchidos: ID, Cliente, Data, Hora, Vendedor, Descrição e Valor Orçado. Após preencher esses campos clique em Registrar, os dados serão salvos no banco de dados, e você será redirecionado à tela inicial.<br>
+Na tela de Orçamentos você tem a opção de realizar uma pesquisa por nome, na qual o resultado será definido com base no filtro escolhido (Cliente ou Vendedor), e há também a opção de realizar uma pesquisa por intervalo de data, na qual é necessário preencher uma data inicial e uma data final. Os resultados são apresentados abaixo das opções de pesquisa, em uma tabela, ordenados de forma decrescente com base da data de cadastro. Se a informação pesquisada não for encontrada, nada aparecerá na tela.<br>
+
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
